@@ -1,0 +1,6 @@
+if I want to have an input inside the function, i need a parameter.
+
+def func(parameter) :
+    if parameter == 1
+    ...
+

@@ -1,0 +1,15 @@
+lista = [0, 1, 2, 3]
+
+for i in lista
+
+'i' it is a variable that will go through the list and will have the value of the list at each repetition
+
+for i in range(1, 101, 1)
+
+will repeat what's in the loop 100x
+
+
+while (thing):
+
+for break the while loop you have to return: "thing" = False.
+or break the loop with an "break".

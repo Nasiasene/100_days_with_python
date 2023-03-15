@@ -1,0 +1,29 @@
+dictionaries
+
++ we work with keys and they have values.
+
+
+dict = {'key' : value}
+
+dict2 = {"Foo fighters" : "Walk", "Beatles":"Jude"}
+
+dict['key']   ->   value
+
++ To add a new item just call the dictionary assign a new key and give a value.
+
+
+dict["arroz"] = "feijao"
+
+print(dict) = {'key':value , 'arroz' : 'feijao'}
+
++ if I give a for in a dict it will return your keys.
+
+for i in dict:
+    print(i)
+
+output: 'key', 'arroz'
+
+for i in dict:
+    print(dict[i])
+
+output: 'value', 'feijao'

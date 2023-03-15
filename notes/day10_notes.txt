@@ -1,0 +1,14 @@
+docstring.
+Cann explain what a function do withou usind the: #
+
+ex:
+def hello():
+    '''This function, say hello when request.'''
+    print(ola)
+
+sinntax: '''<docstring>'''.
+is documented.
+
+
+The .title() function serves to leave the first letters of each word in a string in uppercase
+

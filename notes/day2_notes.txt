@@ -1,0 +1,6 @@
+f-string, i can put variables inside the string.
+    print(f'blabla{variable}')
+
+round() round your variable if it is int.
+    mount = 2,7689
+    round(mount, 2)   //  mount = 2,77

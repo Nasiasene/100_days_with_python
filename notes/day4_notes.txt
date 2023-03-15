@@ -1,0 +1,33 @@
+LISTs:
+
+.count() counts the number of times an object is repeated in an array.
+    "nasiasene".count('e')      //    = 2
+
+.lower() make all string lower case.
+
+index = position of an object in an array.
+
+states = ['PB', 'PE', 'RJ', 'SP']
+
+states[1] = 'PE'
+
+states.append('PB')  append an item on a list.
+
+    list = ['PB', 'PE', 'RJ', 'SP', 'PB']
+
+states.index('RJ')    //    = 2
+
+len(states)    //      4
+
+var = "hi, testing"
+
+var.split(' ')   ==    ['hi,', 'testing']
+
+
+sum = sum the integer values ​​of a list.
+min = give the minimun value.
+max = give the max value.
+len = index.
+remove = remove an object by the name.
+del = remove an object by the index
+pop = remove a object by the index and return his value.
