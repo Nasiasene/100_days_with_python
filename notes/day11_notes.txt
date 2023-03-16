@@ -1,0 +1,49 @@
+* Local Scope:
+When i creat a thing (variable, or a new function for exemple) inside a function, this thing can only be acessed inside it.
+
+ + ex:
+def hello():
+    hi = 0
+    print(hi)  \\  This will be printed.
+
+print(hi)  \\  This will not be printed.
+
+* Global Scope:
+When you define a variable, for exemple, in the code (outside a function), you can use this variable for wathever you want.
+
+ + ex:
+ hi = 0
+ def hello():  
+    print(hi)  \\  This will be printed.
+
+print(hi)  \\  This will be printed.
+
+
+++obs1:  if you create a variable inside of an if-else or while/for loop, this variable has an Global Scope.
+
+++ obs2: to change a global scope inside a function you can:
+1.
+hello = 0   
+def hi():
+    global hello 
+    '''here i say that if i put an 'hello' variable inide this function he will be refers at the global vvariable with the same name'''
+
+    hello = 1
+
+hi()
+print(hello)  \\  return 1
+
+2.
+hello = 0
+def hi():
+        return hello + 1
+
+print(hi())
+
+
+* CONSTANT:
+To define a constant you need to define as a normal variable but in upper case.
+
+ex:
+PI = 3.1415
+URL = 'https://www.google.com'
