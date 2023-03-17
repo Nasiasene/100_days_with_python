@@ -3,7 +3,7 @@ import art
 from data import data
 
 def random_person():
-    return data[random.randint(0, 49)]
+    return random.choice(data)
 
 def print_famous(person):
     return(f"{person['name']}, a {person['description']}, from {person['country']}.")
@@ -21,6 +21,8 @@ def game():
     person_1 = random_person()
     while True:
         person_2 = random_person()
+        while person_2 == person_1:
+            person_2 = random_person()
         print(f"\nCompare A: {print_famous(person_1)}")
         print(art.vs)
         print(f"\nCompare B: {print_famous(person_2)}")
