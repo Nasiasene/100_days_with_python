@@ -72,6 +72,7 @@ while on_off:
     else:
         if select != 'espresso' and select!= "latte" and select != "capuccino":
             print("input a valid option")
+            continue
         else: 
             cafe = MENU[select]
             if resource_amount(cafe) == 1:
