@@ -1,0 +1,33 @@
+Programação orientada az objetos.
+
+posso crira especies de variáveis, chamadas de objetos, que tem funções especificas e atributos especificos.
+
+este objeto necessariamente tem um classe, e essa classe determina as suas funções e os seus atributos.
+
+exemplo:
+objeto: carro
+classe: automóvel / andar(): function / cor = azul:  atributo.
+
+object = Class()
+print(object.atribut)
+object.function()
+
+
+
+'''
+example with the library PrettyTable:
+
+import prettytable
+
+table = prettytable.PrettyTable()
+#here i create an object and define her class as PrettyTable.
+
+table.add_column("Pokemon Name", ['Pikachu', 'Squirtle', 'Charmander'])
+table.add_column('Type', ['Eletric', 'Water', 'Fire'])
+#thats an function/method.
+
+table.align = 'l' 
+#thats an atribute, has an default value = 'c'enter.
+
+print(table)
+'''
