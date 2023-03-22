@@ -27,3 +27,10 @@ class CoffeeMaker:
         for item in order.ingredients:
             self.resources[item] -= order.ingredients[item]
         print(f"Here is your {order.name} ☕️. Enjoy!")
+
+    def refil(self): #MY_FUNCTION.
+        self.resources = {
+            "water": 300,
+            "milk": 200,
+            "coffee": 100,
+        }
