@@ -17,6 +17,8 @@ while on_off:
         machine.report()
         money_machine.report()
         continue
+    elif order_coffee == 'refil':
+        machine.refil() #MY_FUNCTION.
     else:
         if menu.find_drink(order_coffee):
             order_coffee = menu.find_drink(order_coffee)
