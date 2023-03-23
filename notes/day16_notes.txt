@@ -1,12 +1,12 @@
-Programação orientada az objetos.
+Object oriented programming.
 
-posso crira especies de variáveis, chamadas de objetos, que tem funções especificas e atributos especificos.
+I can create kinds of variables, called objects, that have specific functions and specific attributes.
 
-este objeto necessariamente tem um classe, e essa classe determina as suas funções e os seus atributos.
+this object necessarily has a class, and that class determines its functions and attributes.
 
-exemplo:
-objeto: carro
-classe: automóvel / andar(): function / cor = azul:  atributo.
+exemple:
+objeto: car
+classe: automobile / run(): function / color = blur:  attribute.
 
 object = Class()
 print(object.atribut)
