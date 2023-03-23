@@ -1,0 +1,70 @@
++ How to create a class?
+
+class User:
+    \\code
+
+
+object = User()
+
++ How to create a atribute?
+
+simple example(not conventional):
+object = User()
+object.atribute = 0
+object.atribute2 = 'hello'
+
+object.atribute  //  0 
+
+Initialize the class(conventional):
+
+class Test:
+    def __init__(self):  \\ self is like the object i will create soon in the code.
+    //initialise attributes
+
+everytime i call an object the __init__ function will be called to.
+
+ex:
+class User:
+    def __init__(self):
+    print("hi")
+
+object = User()   //WILL PRINT "HI" EVEN WITHOUT A PRINT STATMENT.
+
+
+ex2:
+class User:
+    def __init__(self, user_id, username):
+        self.id = user_id
+        self.username = username
+        self.folowers = 0      //will not have to give this parameter when call it.
+
+    // when i do this i have to provide this informatio when i call the class.
+
+object = User(002, 'davi')
+object1 = User() //ERROR.
+
+object.folowers  //  0
+
+
++ How to creat methods?
+
+ex:
+
+class User:
+    def __init__(self, user):
+        self.followers = 0 #atribute
+        self.following = 0 
+        self.username = user
+
+    def follow(self, user):
+        user.folowers += 1
+        self.following += 1
+        
+user1 = User('davi')
+user2 = User('nasiasene')
+
+user2.follow('davi')
+print(f"{user1.username} has {user1.followers} and follow {user1.following}")
+// "davi has 1 and follow 0"
+print(f"{user2.username} has {user2.followers} and follow {user2.following}")
+// "nasiasene has 0 and follow 1"
