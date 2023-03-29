@@ -1,0 +1,5 @@
+how to 'listen' the user:
+
+in the turtle library you just have to create an object to manipulate the screen (Screen() class), and put the function listen()
+
+after that, you need to say what every comand will do with the function onkey(recives a function, recieves the input).
