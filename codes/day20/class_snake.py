@@ -1,4 +1,5 @@
 import turtle as t
+POSITIONS = [(0,0), (-20, 0), (-40, 0)]
 
 class Snake:
     def __init__(self):
@@ -8,16 +9,19 @@ class Snake:
 
 
     def create_snake(self):
-        pos = [0,0]
-        for i in range (3):
-            shape = t.Turtle("square")
-            shape.color("green")
-            shape.penup()
-            shape.goto(x = pos[0], y = pos[1])
-            self.snake.append(shape)
-            pos[0] -= 20
+        for position in POSITIONS:
+            self.increase(position)
 
+    def increase(self, position):
+        shape = t.Turtle("square")
+        shape.color('black', "green")
+        shape.penup()
+        shape.goto(position)
+        self.snake.append(shape)
     
+    def extend_snake(self):
+        self.increase(self.snake[-1].position())
+
     def move(self):
         for i in range((len(self.snake) - 1), 0, -1):
             cord_x = self.snake[i - 1].xcor()
