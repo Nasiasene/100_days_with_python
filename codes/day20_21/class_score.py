@@ -19,4 +19,4 @@ class Scoreboard(Turtle):
     def game_over(self):
         self.goto(0, 0)
         self.color('red')
-        self.write("VAI TOMAR NO CU FLAMENGO!", align = 'center', font = ('Times', 30, 'normal'))
+        self.write("Game Over!", align = 'center', font = ('Times', 30, 'normal'))
