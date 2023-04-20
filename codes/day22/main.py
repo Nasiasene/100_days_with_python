@@ -8,7 +8,7 @@ from class_score import Score
 screen = t.Screen()
 screen.bgcolor('black')
 screen.setup(800, 600)
-screen.title('Pong Gmae!')
+screen.title('Pong Game!')
 screen.tracer(0)
 
 
