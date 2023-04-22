@@ -46,5 +46,10 @@ class Snake:
         if self.head.heading() != 180:
             self.head.setheading(0)
 
-
+    def reset(self):
+        for seg in self.snake:
+            seg.goto(1000, 1000)
+        self.snake.clear()
+        self.create_snake()
+        self.head = self.snake[0]
     
