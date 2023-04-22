@@ -1,0 +1,36 @@
+com python posso abrir arquivos com o metodo open()
+posso adicionala a uma variavel
+
+posso usar a funcao read para retornar o conteudo do arquivo como uma str.
+
+quando nao for mais necessario utilizar o arquivo, basta fecha-lo, assim nao sera necessario ficar processando-o
+
+exemplo:
+file = open("test.txt")
+print(file.read())
+file.close()
+
+or
+
+with open("test.txt") as file:    #dont need to close
+    print(file.read())
+
+
+para escrever dentro de um arquivo devo por o parametro 'w' (write) ou 'a' (append) dentro da funcao open (vem comno padrao 'r'(read))
+
+with open("test.txt", mode = 'a') as file:
+    file.write("TESTE")
+
+
+se usarmos o open para abrir um arquivo que nao existe, ele criará um
+
+
+para abrirmos arqivos que nao estao na mesma paasta do main, basta eu percorer o caminbho de onde ele esta no computador.
+
+ex: \Users\davit\Desktop LEMBRE DE TROCAR \ POR /
+
+
+Aboslute path:
+you will take the file by her root
+
+Relative pathyou will take the file by your position
