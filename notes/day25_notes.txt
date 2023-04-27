@@ -1,0 +1,20 @@
++ pandas:
+
+Series = data line (coluna)
+DataFrame = dats/series set
+
+- commands:
+
+pd.read_...() = read the document and turns it into a DataFrame
+
+df[...].to_list() = turns a series into a python list
+
+df[...].sum()
+       .max()
+       .mean()
+       .std()
+       .var()
+
+
+to access the lines of a DataFrame, when calling it i must pass parameters
+ex: df[df['temp'] == df['temp'].max()] #will return the maximum value row.
