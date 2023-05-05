@@ -16,12 +16,13 @@ test(add = 3, multiply = 5)
 
 
 How to print:
-necessário usar pós declarar um widget.
+necessário usar pós declarar um widget, caso nao, ele nao aparecerá.
 
-pack()   -   põe os wisgets no topo.(não especifica perfeitamente onde botar.)
+pack(side='')  -  põe os wisgets no topo.(não especifica perfeitamente onde botar.)
 
-place()  -   ponho o widget numa coodenada especifca.
+place(x=  , y=  )  -  ponho o widget numa coodenada especifca.
 
+grid(column=  , row =  )  -  divida o layout como se tivessem linhas e colunas.
 
 
 =========================================================
