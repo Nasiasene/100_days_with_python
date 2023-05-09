@@ -1,9 +1,11 @@
-+ *args = é uma lista(tupla) de argumentos que o usuário irá passr para uma função.
-obs: nao precisa do nome "args" somente do "*"
++ *args = is a list (tuple) of arguments that the user will pass to a function.
+obs: you don't need the name "args" just the "*".
+
 for i in args:
     (...)
 
-+ **kwargs = é um dicionário, onde ao usar numa funcao, passa-se sua chave e seu valor.
++ **kwargs = is a dictionary, where when using a function, you pass its key and its value.
+
 def test(**kwargs):
     for key, value in kwargs.items():
         (...)
