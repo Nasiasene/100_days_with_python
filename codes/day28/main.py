@@ -14,7 +14,6 @@ rep = 0
 marker =''
 timer = None
 
-
 def reset():
     global marker, rep
 
@@ -23,8 +22,6 @@ def reset():
     canvas.itemconfig(canvas_text, text = "00:00")
     marker = ''
     rep = 0
-
-
 
 def start_timer():
     global rep
@@ -38,14 +35,12 @@ def start_timer():
             count_down(WORK_MIN * 60)
             timer_label.config(text = 'Work!')
 
-
     else:
         count_down(SHORT_BREAK_MIN * 60)
         timer_label.config(text = 'Break...')
         marker += '✓'
         check_mark_label.config(text = f'{marker}')
     rep += 1
-
 
 def count_down(count):
     global timer
