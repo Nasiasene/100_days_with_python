@@ -1,0 +1,18 @@
+try:
+    (something)
+
+
+except NameError <if try generate some error>:
+    (...)
+
+except ErrorName as error:
+    error = var
+    (...)
+
+else <if try dont generate an error>:
+    (...)
+
+finally <works independent of try>:
+    (...)
+    
+    raise NameError <even though theres no error, it will generate a NameError>
