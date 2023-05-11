@@ -42,7 +42,7 @@ while '_' in display:
             break
     used_letter.append(guess)
     print(display)
-
+    
 
 if lives != 0:
     print('You win.')
