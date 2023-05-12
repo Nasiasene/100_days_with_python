@@ -1,7 +1,7 @@
 import tkinter as t
 from tkinter import messagebox
 import random as rd
-import pyperclip 
+import json
 GREY = '#6c707a'
 
 def gen_password():
@@ -20,12 +20,17 @@ def gen_password():
     password = "".join(password_list)
     password_entry.insert(0, password)
 
-    pyperclip.copy(password)
 
 def append():
     site = website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
+    new_data = {
+        site: {
+            'email': email,
+            'password': password,
+        }
+    }
 
 
     if len(site) == 0 or len(email) == 0 or len(password) == 0:
@@ -35,12 +40,39 @@ def append():
         ok_cancel = messagebox.askokcancel(title='Confirm', message=f"These are the informations entered:\nPassword: {password}\nSite: {site}\nDo you really want to save?")
 
     if ok_cancel == True:
-        f = open('data.txt', 'a')
-        f.write(f'{site}  |  {email}  |  {password}\n')
-        f.close()
-        website_entry.delete(0, len(site))
-        password_entry.delete(0, len(password))
+        try:
+            with open('data.json', 'r') as data_file:
+                data = json.load(data_file)
 
+        except FileNotFoundError:
+            with open('data.json', 'w') as data_file:
+                json.dump(new_data, data_file, indent=4)
+
+        else:
+            data.update(new_data)
+
+            with open('data.json', 'w') as data_file:
+                json.dump(data, data_file, indent=4)
+        finally:
+            website_entry.delete(0, len(site))
+            password_entry.delete(0, len(password))
+
+def search():
+    site = website_entry.get()
+    try:
+        with open ("data.json") as df:
+            data = json.load(df)
+
+    except FileNotFoundError:
+        messagebox.showinfo(title='Error', message='This site was not appended.')
+
+    else:
+        if site in data:
+            password = data[site]['password']
+            email = data[site]['email']
+            messagebox.showinfo(title=f'Site: {site}', message=f'Email: {email}\nPassword: {password}')
+        else:
+            messagebox.showinfo(title='Error', message='This site was not appended.')
 
 
 window = t.Tk()
@@ -67,14 +99,14 @@ password_label.grid(row=3, column=0)
 
 
 website_entry = t.Entry()
-website_entry.config(bg=GREY, width=57)
+website_entry.config(bg=GREY, width=38)
 website_entry.focus()
 email_entry = t.Entry()
 email_entry.config(bg=GREY, width=57)
 email_entry.insert(0, 'davi.nasiamorim366@gmail.com')
 password_entry = t.Entry()
 password_entry.config(bg=GREY, width=38)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry.grid(row=1, column=1)
 email_entry.grid(row=2, column=1, columnspan=2)
 password_entry.grid(row=3, column=1)
 
@@ -83,8 +115,10 @@ add_button = t.Button()
 add_button.config(bg=GREY, text='Add', width= 49, command=append)
 password_button = t.Button()
 password_button.config(bg=GREY, width=15, text = 'Generate Password', command=gen_password)
+serach_button = t.Button()
+serach_button.config(bg=GREY, text='Search', width=15, command=search)
 add_button.grid(row=4, column=1, columnspan=2)
 password_button.grid(row=3, column=2)
-
+serach_button.grid(row=1, column=2)
 
 window.mainloop()
