@@ -17,7 +17,6 @@ scoreboard = Scoreboard()
 player = Player()
 cars = []
 
-
 screen.listen()
 screen.onkey(player.up, 'Up')
 
