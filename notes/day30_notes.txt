@@ -16,3 +16,6 @@ finally <works independent of try>:
     (...)
     
     raise NameError <even though theres no error, it will generate a NameError>
+
+
+json data behaves like a nested dictionary
