@@ -1,0 +1,30 @@
++ smtplib is a module responsible for sending emails. When using it, you must create a variable of type SMTP(), which serves as the connection with the gmail, hotmail, etc. server.
+
+- ex:
+import smtplib as smtp
+
+my_email = "davi.nasiamorim366@gmail.com"
+password = "xxx"
+
+connection = smtp.SMTP("smtp.gmail.com")
+connection.starttls()
+connection.login(user=my_email, password=password)
+connection.sendmail(
+    from_addr=my_email, to_addrs="davi.ted@hotmail.com", 
+    msg="Subject:Test subject\n\nBody of e-mail.")
+connection.close()
+
+
+
+
++ datetime is a python module responsible for monitoring the day, year, month and time.
+
+- ex:
+import datetime as dt
+
+time = dt.datetime.now()
+year = time.year
+month = time.month
+weak = time.weekday()
+
+my_birthday = dt.datetime(year=2003, month=8, day=10)
