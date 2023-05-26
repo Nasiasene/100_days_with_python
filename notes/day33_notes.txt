@@ -1,0 +1,18 @@
++ API: Application Programming Interface.
+
+called a waiter, it is responsible for bringing the data to you, it is requested to an api of a pcompany and it assumes the data.
+
+data is usually received in json format
+
+it is necessary to ask to receive (request)
+
+order numbers =
+1xx: hod on
+2xx: here it is
+3xx: go away
+4xx: your error
+5xx: server error
+
+After all, what is the HTTP protocol? The abbreviation for “Hypertext Transfer Protocol” describes a stateless protocol with which data can be transmitted over an IP network.
+
+*it is worth remembering that whenever we open a web page we make a request to enter it before entering.
