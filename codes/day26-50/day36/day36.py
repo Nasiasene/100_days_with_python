@@ -2,8 +2,8 @@ import requests as r
 import datetime as dt
 
 
-API_KEY = 'X39FJFUR07A4EEI2'
-API_KEY2 = '552e5c6449874b4692864778a2ef8f19'
+API_KEY = 'xxx'
+API_KEY2 = 'xxx'
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
