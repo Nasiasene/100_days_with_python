@@ -16,3 +16,16 @@ order numbers =
 After all, what is the HTTP protocol? The abbreviation for “Hypertext Transfer Protocol” describes a stateless protocol with which data can be transmitted over an IP network.
 
 *it is worth remembering that whenever we open a web page we make a request to enter it before entering.
+
+
++ Requests: to be able to work with API in python, you will need the requests library, in which you can manipulate data from the api.
+
+ex:
+import requests as r
+
+response = r.get(url)
+
+get : we asked for data and received it.
+post: we send date.
+put : updates the data.
+delete : delete data.
