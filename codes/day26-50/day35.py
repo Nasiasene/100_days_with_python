@@ -3,7 +3,7 @@ import smtplib as smtp
 
 EMAIL = 'davi.nasiamorim366@gmail.com'
 PASSWORD = 'xxx'
-key ='1e6188bb802c532892853a16e1b9e8c1'
+key ='xxx'
 endpoint = 'https://api.openweathermap.org/data/2.5/forecast?'
 parameters = {
     'lat':  -7.11532,
