@@ -2,7 +2,7 @@ import requests as r
 
 USER = "xxx"
 PASSWORD = "xxx"
-URL = "https://api.sheety.co/be40bab849980edbd2c4d54d6ca83c7a/flightDeals/prices"
+URL = "https://api.sheety.co/xxx/xxx/xxx"
 BASIC = (USER, PASSWORD)
 
 
