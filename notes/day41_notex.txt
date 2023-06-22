@@ -19,5 +19,5 @@ ex: <h1>TEXT</h1> //This a heading
 
 void Elements: não tem nenhum tipo de conteúdo pos sua tag.
 
-<hr />    //Horizontal Rule (literal line)
-<br />    //Break (\n)
+<hr />   or <hr> //Horizontal Rule (literal line)
+<br />   or <br> //Break (\n)
