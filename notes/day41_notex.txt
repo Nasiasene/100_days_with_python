@@ -1,0 +1,15 @@
++ HTML = esqueleto do site (FUNDAMENTAL).
+HyperText Markup Language 
+
+HyperText: texto que te leva para outros textos/sites.
+
+Markup Language: Tags que caracterizam se aquele texto é oridnario, ou é um cabeçalho, etc.
+ex: <h1>TEXT</h1> //This a heading
+<h1> e </h1> são tags.
+<h1>TEXT</h1> é um elemento.
+
+CSS = estiliza o site.
+
+JavaScrp = o funcionamento por tras do site.
+
+
