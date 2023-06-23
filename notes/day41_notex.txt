@@ -1,23 +1,23 @@
-+ HTML = esqueleto do site (FUNDAMENTAL).
++ HTML = site skeleton (FUNDAMENTAL).
 
-+CSS = estiliza o site.
++CSS = styles the site.
 
-+JavaScrp = o funcionamento por tras do site.
++JavaScrp = the workings behind the website.
 
 
--HTML: HyperText Markup Language 
-HyperText: texto que te leva para outros textos/sites.
-Markup Language: Tags que caracterizam se aquele texto é oridnario, ou é um cabeçalho, etc.
+-HTML: HyperText Markup Language
+HyperText: text that takes you to other texts/sites.
+Markup Language: Tags that characterize whether that text is original, or is a heading, etc.
 
 ex: <h1>TEXT</h1> //This a heading
-<h1> e </h1> são tags.
-<h1>TEXT</h1> é um elemento.
+<h1> and </h1> are tags.
+<h1>TEXT</h1> is an element.
 
-<h1>heading</h1> 
+<h1>heading</h1>
 <p>paragraph</p>
 
 
-void Elements: não tem nenhum tipo de conteúdo pos sua tag.
+void Elements: does not have any type of content after its tag.
 
-<hr />   or <hr> //Horizontal Rule (literal line)
-<br />   or <br> //Break (\n)
+<hr /> or <hr> //Horizontal Rule (literal line)
+<br /> or <br> //Break (\n)

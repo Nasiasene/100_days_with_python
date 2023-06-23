@@ -1,0 +1,117 @@
+Estrutura básica HTML(Boilerplate)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Website</title>
+    </head>
+
+    <body>
+        <h1>Hello world!</h1>
+    </body>
+</html>
+
+
++ <!DOCTYPE html> 
+declara a versão do html que estamos usando.
+
+
++ <html lang="en"></html>
+o main do html.
+lang será a linguagem.
+
+
++ <head></head>
+esta por tras dos panos, o que for escrito aqui não aparecerá para o usuário exemplo do tipo de caracteres e do titulo do site.
+
+
++ <meta charset="UTF-8">
+seta o tipo de caracteres usado no site, sempre estará no <head>.
+
+
++ <title></title>
+título do website.
+
+
++ <body></body>
+onde vai o conteudo do site, textos, imagens, links etc.
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+LISTS
+
++Unodered list:
+<ul>
+    <li>test</li>  (list item)
+    <li>test2</li> (list item)
+</ul>
+
+// 
+
++ test
++ test2
+
+
+
++Ordered list:
+<ol>
+    <li>test</li>
+    <li>test2</li>
+</ol>
+
+//
+
+1.test
+2.test2
+
+
+-OBS: você pode aninhar listas
+<ul>
+    <li>test1
+    <ol>
+        <li>test2
+        <ul>
+            <li>test3</li>
+        </ul></li>
+        <li>test4</l1>
+    </ol></li>
+</ul>
+
+//
+
++test1
+    1.test2
+        +test3
+    2.test4
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+ANCHOR(hyperlinks) and ATRIBUTES
+
+<tag attribute=value anotheratribute=value>Content</tag>
+desta forma colocan-se atributos em certas tags.
+
+<tag dragabble=true>Test</tag>
+dragabble é um atributo global, no qual toda e qualquer tag pode ter, mas existem atributos especificos para algumas tags.
+
+<a href="http://www.link.com">This is a link to a website</a>
+href é o atributo responsável por falar qual link será atribuido aquele hyper texto.
+
+<ol reversed="true"></ol>
+este atributo faz com que a lista ordenada comece do maior valor e va ate o menor (decresça).
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+IMAGES 
+
+src = source
+alt = alternative text descripition (for blinds)
+<img src="url" alt="This photo is this"/>
+perceba que nao existe closing tag, e se comporta similar a o break <br /> e ao o horizontal rule <hr />, ou seja é um VOID ELEMENT.
