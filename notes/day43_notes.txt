@@ -2,7 +2,7 @@
 Cascading Style Sheets.
 
 
-
+-------------------------------------------------- -------------------------------------------------- ---------------------------
 -How to add CSS?
 
 o Inline:
@@ -12,7 +12,7 @@ ex: <html style="background: blue"></html>
 // "background: blue" é o código em CSS.
 
 o Internal:
-Usa-se uma tag especial, como o <body> e <head> chamado "<style>" e entre a sua abertura e fechamento é onde está o css dentro del, eu escolho o elemento do arquivo html que eu desejo alterar, podendo ser qualquer um.
+Usa-se uma tag especial, como o <body> e <head> chamado "<style>" e entre a sua abertura e fechamento é onde está o css dentro dela, eu escolho o elemento do arquivo html que eu desejo alterar, podendo ser qualquer um.
 
 ex: <html>
         <head>
@@ -29,7 +29,89 @@ ex: <html>
 // html{} = SELECTOR
 // background = PROPETY
 // red = VALUE
+// **element: {propety1: value; ...}**
 
 o External:
 O CSS está em um arquivo distinto e dentro desse arquivo css é onde estão suas "regras" e dentro do head do nosso arquivo html teremos uma tag chamada <link /> e temos dois atributos: rel(relationship) href(onde o arquivo css esta localizado)
 e dentro do arquivo css terão suas regras organizadas assim como no modo internal.
+
+
+-------------------------------------------------- -------------------------------------------------- ---------------------------
+
+
+-CSS Selectors: Choosing where to apply the CSS.
+
+este topico refere-se aos SELETORES.
+
+
+o TAG:
+h1{
+    color: blue;
+}
+//h1 = Selector.
+
+quando o seletor é somente a tag, ele irá alterar todas as essas tags no codigo html.
+
+
+
+
+o CLASS:
+ .red-heading{
+    color: red;
+}
+neste caso selecionamos uma classe em especifico e dessa forma alteraremos ela.
+
+classes podem ser criadas a partir da declaraçãop de uma tag.
+
+<h2 class="red-heading">Text</h2>
+
+tags diferentes podem pertencer a uma mesma classe.
+
+<h2 class="red-heading">Text</h2>
+<p class="red-heading">Paragraph</p>
+
+
+
+
+o ID:
+#main{
+    color: green;
+}
+
+seleciona todos os elementos com uma id especifica.
+
+funciona de forma similar as classes.
+
+<h2 id="main">Text</h2>
+
+
+a diferença entre o id e a classe é que só pode haver um único id especifico para um único elemento.
+
+
+
+o  ATTRIBUTE:
+p[draggable]{
+    color: purple;
+}
+//p = tag
+//draggable = attribute
+
+seleciona todos os elementos em especifico que tenham um atributo em comum.
+
+<p draggable="true">paragraph1</p>
+<p draggable="false">paragra</p>
+
+p[draggable="false"]{
+    color: red;
+}
+
+somente os atributos selecionado como false serão modificados.
+
+
+
+o UNIVERSAL:
+*{
+    color: blue;
+}
+
+desta forma, independente da tag, classe, id ou atributo, o elemento será alterado.
