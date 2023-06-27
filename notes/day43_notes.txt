@@ -1,0 +1,35 @@
++ CSS : Estilizando su site.
+Cascading Style Sheets.
+
+
+
+-How to add CSS?
+
+o Inline:
+Pouco usado, mas voce declara a propriedade e da o valor para ela do que voce quer que seja alterado na mesma linha que o seu elemento for adicionada (pode ser num paragrafo, linha, ou no próprio html global)
+
+ex: <html style="background: blue"></html>
+// "background: blue" é o código em CSS.
+
+o Internal:
+Usa-se uma tag especial, como o <body> e <head> chamado "<style>" e entre a sua abertura e fechamento é onde está o css dentro del, eu escolho o elemento do arquivo html que eu desejo alterar, podendo ser qualquer um.
+
+ex: <html>
+        <head>
+            <body>
+                <style>
+                    html{
+                        background: red;
+                    }
+                </style>
+            </body>
+        </head>
+    </html>
+// html{background: red;} = CSS
+// html{} = SELECTOR
+// background = PROPETY
+// red = VALUE
+
+o External:
+O CSS está em um arquivo distinto e dentro desse arquivo css é onde estão suas "regras" e dentro do head do nosso arquivo html teremos uma tag chamada <link /> e temos dois atributos: rel(relationship) href(onde o arquivo css esta localizado)
+e dentro do arquivo css terão suas regras organizadas assim como no modo internal.
