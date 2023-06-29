@@ -1,20 +1,20 @@
-+ CSS : Estilizando su site.
++ CSS : Styling your site.
 Cascading Style Sheets.
 
 
 -------------------------------------------------- -------------------------------------------------- ---------------------------
 -How to add CSS?
 
-o Inline:
-Pouco usado, mas voce declara a propriedade e da o valor para ela do que voce quer que seja alterado na mesma linha que o seu elemento for adicionada (pode ser num paragrafo, linha, ou no próprio html global)
+or Inline:
+Little used, but you declare the property and give it the value of what you want to be changed in the same line that your element is added (it can be in a paragraph, line, or in the global html itself)
 
 ex: <html style="background: blue"></html>
-// "background: blue" é o código em CSS.
+// "background: blue" is the CSS code.
 
-o Internal:
-Usa-se uma tag especial, como o <body> e <head> chamado "<style>" e entre a sua abertura e fechamento é onde está o css dentro dela, eu escolho o elemento do arquivo html que eu desejo alterar, podendo ser qualquer um.
+the Internal:
+A special tag is used, like <body> and <head> called "<style>" and between its opening and closing is where the css is inside it, I choose the element of the html file that I want to change, being able to be anyone.
 
-ex: <html>
+eg: <html>
         <head>
             <body>
                 <style>
@@ -32,8 +32,8 @@ ex: <html>
 // **element: {propety1: value; ...}**
 
 o External:
-O CSS está em um arquivo distinto e dentro desse arquivo css é onde estão suas "regras" e dentro do head do nosso arquivo html teremos uma tag chamada <link /> e temos dois atributos: rel(relationship) href(onde o arquivo css esta localizado)
-e dentro do arquivo css terão suas regras organizadas assim como no modo internal.
+The CSS is in a different file and inside that css file is where your "rules" are and inside the head of our html file we will have a tag called <link /> and we have two attributes: rel(relationship) href(where the css file Its located)
+and inside the css file will have their rules organized just like in internal mode.
 
 
 -------------------------------------------------- -------------------------------------------------- ---------------------------
@@ -41,7 +41,7 @@ e dentro do arquivo css terão suas regras organizadas assim como no modo intern
 
 -CSS Selectors: Choosing where to apply the CSS.
 
-este topico refere-se aos SELETORES.
+this topic refers to SELECTORS.
 
 
 o TAG:
@@ -50,7 +50,7 @@ h1{
 }
 //h1 = Selector.
 
-quando o seletor é somente a tag, ele irá alterar todas as essas tags no codigo html.
+when the selector is just the tag, it will change all those tags in the html code.
 
 
 
@@ -59,13 +59,13 @@ o CLASS:
  .red-heading{
     color: red;
 }
-neste caso selecionamos uma classe em especifico e dessa forma alteraremos ela.
+in this case we select a specific class and that way we will change it.
 
-classes podem ser criadas a partir da declaraçãop de uma tag.
+classes can be created from the declaration of a tag.
 
 <h2 class="red-heading">Text</h2>
 
-tags diferentes podem pertencer a uma mesma classe.
+different tags can belong to the same class.
 
 <h2 class="red-heading">Text</h2>
 <p class="red-heading">Paragraph</p>
@@ -78,34 +78,34 @@ o ID:
     color: green;
 }
 
-seleciona todos os elementos com uma id especifica.
+selects all elements with a specified id.
 
-funciona de forma similar as classes.
+works similarly to classes.
 
 <h2 id="main">Text</h2>
 
 
-a diferença entre o id e a classe é que só pode haver um único id especifico para um único elemento.
+the difference between id and class is that there can only be one specific id for a single element.
 
 
 
-o  ATTRIBUTE:
+o ATTRIBUTE:
 p[draggable]{
     color: purple;
 }
 //p = tag
-//draggable = attribute
+// draggable = attribute
 
-seleciona todos os elementos em especifico que tenham um atributo em comum.
+selects all specified elements that have a common attribute.
 
 <p draggable="true">paragraph1</p>
-<p draggable="false">paragra</p>
+<p draggable="false">paragraph</p>
 
 p[draggable="false"]{
     color: red;
 }
 
-somente os atributos selecionado como false serão modificados.
+only attributes selected as false will be modified.
 
 
 
@@ -114,4 +114,4 @@ o UNIVERSAL:
     color: blue;
 }
 
-desta forma, independente da tag, classe, id ou atributo, o elemento será alterado.
+this way, regardless of the tag, class, id or attribute, the element will be changed.

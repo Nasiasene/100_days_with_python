@@ -1,0 +1,105 @@
++ CSS Properties:
+
+properties are the characteristics of an element that will be changed, such as color, background, width, length, etc.
+
+
++ Color
+ex:
+h1 {
+    color: red;
+    background-color: yellow;
+}
+
+
+the COLOR property can be represented not only by its name, but also by its HEX value.
+
+
++ Font
+ex:
+h1 {
+    font-weight: bold;
+    fontsize: 20px;
+    font-family: sans-serif;
+    text-align: center
+}
+
+- photo-size:
+px: pixel, commonly used.
+en: point, used, the size of a point is equivalent to fonts in word.
+in: this measurement is related to which part of the html it is involved, be it the "body" or the "footer" or a list "ol" etc, in it, it is necessary to declare the font-size of these to choose the size with base on em.
+rem: as it works the same as em but instead of taking into account the element in which it is related, it is related to the root of the html, thus having to declare the font-size of the html.
+
+-font-weight
+
+normal or bold
+lighter-XX or bolder+XX
+the value number can vary from 100-900.
+
+-font-family
+
+it's the specific font you're using, like italics, etc.
+
+h1 {
+    font-family: Helvetica, sans-serif;
+}
+h2 {
+    font-family: "Times New Roman", serif
+}
+
+// Helvetica and Times New Roman = typeface
+// sans-serif = generic font type
+
+
+When you want a different font you can look for them and upload them in the file.
+
+
+-------------------------------------------------- -------------------------------------------------- ---------------------------
+
+
++ Margin, Padding and Border
+
+we can see each part of our site as small blocks.
+
+-heigh: Heightens the element vertically.
+-width: increases the element horizontally.
+h1 {
+    height: 10px;
+    weight: 20 px
+}
+
+-Border: adds a border to the desired element.
+img {
+    border: 10px solid black;
+        border-top: 0px;
+        border-width: 0px 10px 20px 30px
+}
+//10px = border thickness.
+//solid = style (can be dashed etc)
+//black = border color
+//border-top = one more characteristic being modified, but this time it behaves like a sub-characteristic of the border itself, in this case, it defines the expression of the top part of the element.
+//border-width = also behaves as a sub-characteristic of border and serves to define the width of all sides of the border.
+
+
+-Padding: the other elements of it.
+
+sees as an invisible box of the expanding element.
+
+-Margin: just like padding, it distances the elements.
+
+however, the margin works outside the invisible square.
+
+-+++++DIV: container to group elements
+the div element serves to group the elements you want, see it as if you separated everything inside it as a separate box
+
+-------------------------------------------------- -------------------------------------------------- ---------------------------
+
+
++ Inspecting CSS
+press F12 or Ctrl+Shift+i
+or inspect
+
+With this I can both see the html and css codes (in the style tab)
+
+You can momentarily change the site that is open, selecting the section you want to modify the CSS and pressing the "+"
+
+An interesting tool is in (...) -> click on more tools -> CSS Overview
