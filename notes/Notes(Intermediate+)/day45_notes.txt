@@ -1,0 +1,45 @@
++ Beautiful Soup/Web Scrapping
+
+Beautiful Soup library serves to extract data from html files
+
+
+ex:
+from bs4 import BeautifulSoup
+
+file = open(r"C:\Users\davit\Documents\100days_python.py\100_days_with_python\codes\Days 32-57 (Intermediate+)\day45\website.html", encoding="utf-8")
+content = file.read()
+file.close()
+
+soup = BeautifulSoup(content, 'html.parser')
+print(soup.title.string, "\n\nPARAGRAPHS:")
+
+paragraphs = soup.find_all(name="p")
+for i in paragraphs:
+    print(i.getText())
+
+print("\n\nLinks:")
+anchor_tags = soup.find_all("a")
+for i in anchor_tags:
+    print(f"Str: {i.getText()} // Link: {i.get('href')}")
+
+heading = soup.find(name="h1", id="name")
+
+
+url = soup.select_one(selector="p a")
+all_url = soup.select(selector="a")
+
+
+//find = find the first element with this tag, id or class.
+//find_all = find all elements. name="tag". Returns a "list" of elements.
+//apply the "." it only works if the element being selected is just an element in html.
+//the selector looks for the element in the same way as the css.
+
+
+
+to load a web page it is necessary to use requests and transform it into a text.
+
+ex:
+import requests as r
+
+response = r.get("https://news.ycombinator.com/news")
+html = response.text
