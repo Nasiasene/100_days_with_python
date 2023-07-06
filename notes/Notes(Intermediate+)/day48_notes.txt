@@ -1,0 +1,53 @@
+Selenium is used with a similar purpose to Bs, however, with selenium, it is also possible to interact with webpages like doing clicks etc.
+
+
+to use selenium you need to select a specific browser, be it chrome, safari, firefox etc.
+
+after downloading a specific driver for the browser, you will be able to use selenium, just specify the web page you want to access and that's it.
+
+ex:
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+service = Service("C:\Developer\chromedriver.exe")
+driver = webdriver.Chrome(service=service)
+ 
+driver.get("https://en.wikipedia.org/wiki/Main_Page")
+// In this way it imports and opens a site with selenium.
+
+
+selenium tabem can be used for webscrapping/selecting elements.
+ex:
+driver.get("https://www.amazon.com.br")
+
+name = driver.find_element(By.ID, "productTitle")
+
+price = driver.find_element(By.CLASS_NAME, "a-price-whole")
+
+link = driver.find_element(By.CSS_SELECTOR, "#centerCol a")
+
+res = driver.find_element(By.XPATH, '//*[@id="productOverview_feature_div"]/div/table/tbody/tr[2]/td[2]/span')
+
+
+print(name.text)
+print(price.text)
+print(link.text)
+print(res.text)
+//to go after a specific element you must use the fin_... command and use the By parameter
+//By.CSS_SELECTOR: this way you search for an element through its element in css.
+//By.CLASS_NAME: searches for an element through its class.
+//By.ID: Search by the id of an element.
+//By.XPATH: search for XPATH, it is possible to obtain it by inspecting an element and pasting it.
+//.text: with the element already collected, this command serves to show the text present in it
+
+//driver.find_element(By.LINK_TEXT, "...")
+//driver.find_element(By.NAME, "...")
+
+
+
+Now here some interection actions that can be make with selenium:
+
++element.click()
++element.send_keys("...")
++element.send_keys(Keys.ENTER)
+//ENTER, TAB, SHIFT...
