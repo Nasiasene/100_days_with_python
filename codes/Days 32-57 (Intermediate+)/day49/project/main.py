@@ -12,7 +12,7 @@ driver.get("https://orteil.dashnet.org/experiments/cookie/")
 driver.maximize_window()
 
 
-timer = time.time() + 5
+timer = time.time() + 3
 final_time = time.time() + 5*60
 
 
@@ -34,11 +34,11 @@ while True:
 
     if time.time() > timer:
 
-        timer = timer + 5
+        timer = timer + 3
 
         upd_items = [driver.find_element(By.ID, i) for i in ids]
 
-        #colet prices
+        #take prices
         actual_prices = []
         for i in upd_items:
             text = i.text
@@ -55,5 +55,22 @@ while True:
  
 
         #checking prices
-        actual_price = driver.find_element(By.ID, "money")
+        actual_price = driver.find_element(By.ID, "money").text
+        try:
+            actual_price = int(actual_price.replace(",", ""))
+        except:
+            actual_price = int(actual_price)
+        count = []
+        for i in actual_prices:
+            if i<=actual_price:
+                count.append(i)
+        
 
+        #up the most expensive upgrade
+        try:
+            most_expensive = max(count)
+            index = actual_prices.index(most_expensive)
+            up_id = upd_items[index]
+            up_id.click()
+        except ValueError:
+            pass
