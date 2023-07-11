@@ -1,0 +1,49 @@
+currently i'm dating, so...
+
+
+TEST:
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+
+EMAIL="teste@hotmail.com"
+PASSWORD="password"
+
+service = Service("C:\Developer\chromedriver.exe")
+driver = webdriver.Chrome(service=service)
+ 
+driver.get("https://tinder.com/")
+
+driver.maximize_window()
+
+#Log in
+login_button = driver.find_element(By.XPATH, '//*[@id="u490315748"]/div/div[1]/div/main/div[1]/div/div/div/div/header/div/div[2]/div[2]/a/div[2]/div[2]')
+login_button.click()
+time.sleep(1)
+facebook_button = driver.find_element(By.XPATH, '//*[@id="u-1238065328"]/main/div[1]/div/div[1]/div/div/div[2]/div[2]/span/div[2]/button/div[2]/div[2]/div/div').click()
+time.sleep(2)
+
+##Changing to the Facebook pop-up window.
+base_window = driver.window_handles[0]
+fb_login_window = driver.window_handles[1]
+driver.switch_to.window(fb_login_window)
+
+
+facebook_email = driver.find_element(By.ID, "email")
+facebook_password = driver.find_element(By.ID, "pass")
+facebook_email.send_keys(EMAIL)
+facebook_password.send_keys(PASSWORD)
+facebook_password.send_keys(Keys.ENTER)
+
+##Going back to the default page.
+driver.switch_to.window(base_window)
+
+
+time.sleep(10)
+driver.quit()
+
+
+END LOG-IN/PROJECT.
