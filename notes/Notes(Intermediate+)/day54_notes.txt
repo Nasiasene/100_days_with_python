@@ -1,0 +1,16 @@
++ Framework:
+A framework is a framework on which to build web applications.
+specific purpose whose development can be very costly and/or
+problematic. With a framework it is possible to build websites, applications and software to
+from a pre-defined skeleton, changing only other particularities.
+A Python framework is a collection of ready-made code that operates functionalities
+specific to those in need. It's like a finished piece that's bought to be
+inserted in an automobile project and fulfill a function that it would fulfill in any
+another model.
+The main difference between libraries and frameworks is that libraries are used
+to accomplish specific tasks, while frameworks provide a structure
+for the development of a complete project.
+
+
++ Flask:
+Flask is a microframework for web development in Python. It provides the basic tools for creating web applications, such as managing routes and HTTP requests, without providing many additional features or complex configurations.
