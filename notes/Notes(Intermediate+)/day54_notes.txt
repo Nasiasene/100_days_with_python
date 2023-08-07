@@ -12,5 +12,59 @@ to accomplish specific tasks, while frameworks provide a structure
 for the development of a complete project.
 
 
+
 + Flask:
 Flask is a microframework for web development in Python. It provides the basic tools for creating web applications, such as managing routes and HTTP requests, without providing many additional features or complex configurations.
+
+-basic:
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!\nTEST'
+
+
+- __name__:
+is a special variable in Python. It gets its value depending on how we run the script that contains it. Represents the name of the module.
+
+- @app.route('/'):
+is an annotation that tells Flask that when someone lands on the site's main page (the forward slash "/"), it should perform a specific function, such as displaying a "Hello World!" on the screen. It's like a path that connects a URL to a piece of code.
+
+    * Python Decorator: a function that will add extra functionality to an existing function.
+
+        
+        Functions in python are referred to as First-class objects, that means they are treated as a new type of variable/struct. That is, they can be passed as parameters of other functions.
+
+        In python you can nest functions inside others.
+
+        You can use one function as the return of another. this way, I can create a new variable that is used in the same way as the returned function.
+        ex:def test():
+                def test2():
+                    return 0
+                return test2
+            
+            test_ = test()
+            test_() // 0
+
+        In summary, a new function is created that will manipulate the functions assigned to it within it.
+        ex:
+        def decorator(func):
+            time.sleep(2)
+            return func
+
+        @decorator
+        def test():
+            print("test")
+
+
+
+++PROMPT WINDOWS:
+
+cd->change directory or show what directory I'm in.
+    cd ..->back a directory.
+    cd ''name''-> enter the directory.
+mkdir->creates a new directory.
+echo. > ->creates a new file.
+del->remove the file.
+rd /s directory_name->remove directory.
