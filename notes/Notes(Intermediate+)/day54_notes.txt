@@ -58,6 +58,12 @@ is an annotation that tells Flask that when someone lands on the site's main pag
             print("test")
 
 
+        OBS: inside a decorator there will always be another function, commonly called a wrapper and it will be returned at the end.
+
+        
+        OBS_2: if the parent function you will be applying the decorator to has some kind of entry, it will be inside args*/kwargs**.
+
+
 
 ++PROMPT WINDOWS:
 
