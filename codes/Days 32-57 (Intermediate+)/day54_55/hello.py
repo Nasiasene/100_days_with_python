@@ -11,7 +11,7 @@ def hello_world():
 
 @app.route('/<test>/<int:num>') #<> create an variable.
 def test(test, num):
-    return f'<h1>{test} - {num}<h1>' #flask can return html code
+    return f'<h1 style="text-align: center">{test} - {num}</h1><p>test paragraph</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHp72GOIwOBB31vdr2pYMkyxlUhYPTAHQX6LEd7ur_zg&s" width=250>' #flask can return html code
 
 if __name__ == "__main__":
     app.run(debug=True)
