@@ -1,0 +1,9 @@
+++FLASK
+
+to import html code to your flask application you need to create an folder named "templates" and put the html inside it.
+
+the static files(images/css) will be inside of the folder named "static".
+
+CHROME:
+Inspect, Console, document.body.contentEditable=true
+ctrl+shift+c to edit html parts.
