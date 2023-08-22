@@ -7,5 +7,3 @@ the static files(images/css) will be inside of the folder named "static".
 CHROME:
 Inspect, Console, document.body.contentEditable=true
 ctrl+shift+c to edit html parts.
-
-Test
