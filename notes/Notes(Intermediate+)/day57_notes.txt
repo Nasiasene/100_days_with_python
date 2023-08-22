@@ -1,0 +1,9 @@
++JINJA
+Jinja is a template language that allow writing code similar to Python syntax. Then the template is passed data to render the final document.
+
+-using render_template, after the name of the archive, i can sand many variables i want (**kwargs) and will be sended to the html file. e.g: render_template("index.html", var=variable, ...)
+-using the {{}} in the html file, i can right a line of code. e.g:{{var*2}}
+-using a for loop in jinja is necessary to use an {% for... %}{% endfor %}. e.g: {% for x in range(2) %} {{var*2}} {% endfor %}
+-same is valid for if/else. e.g{% if... %}{% else... %}{% endif %}
+-use url_for() inside the html file and use the name of one function to call her link/root. a.g: {{ url_for('homepage') }}
+--inside the url_for() you can pass some parameters, in case that the function inside her need it. e.g: {{ url_for('homepage', num=3) }}
