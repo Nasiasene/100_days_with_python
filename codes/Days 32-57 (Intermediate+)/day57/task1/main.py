@@ -19,6 +19,3 @@ def get_gen_age(name):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-#using render_template, after the name of the archive, i can sand many variables i want (**kwargs) and will be sended to the html file.
-#using the {{}} in the html file, i can use code.
