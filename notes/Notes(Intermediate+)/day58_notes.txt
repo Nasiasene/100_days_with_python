@@ -1,0 +1,224 @@
+https://w3schools.com/bootstrap/bootstrap_templates.asp
+
++ Bootstrap: Bootstrap is an open-source web framework for developing interfaces and front-end components for websites and applications, using HTML, CSS and JavaScript, based on design templates for typography, improving the user experience on a website friendly and responsive.
+
+Para adicionar o bootstrap basta:   
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+...
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+
+
+**LAYOUT**:
+*12 column system*:
+<div class="container">
+    <div class="row">
+        <items... class="col">
+    </div>
+</div>
+
+-Auto Fit fro every item.
+-the container and col class has variation that change her size. e.g: .container-xxl     .col-sm       .container-fluid
+    sm-(mobile)  md-(ipad)  lg-(laptop)  xl-(desktop)  xxl-(Tv etc)  fluid-(end to end)
+-changing the class col you change her width.   .col-2 //(2/12)
+    i can define the size for each device. e.g <dic class="col-sm-12 col-md-8 col-lg-4">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">Hello</div>
+        <div class="col-4">Hello</div>
+        <div class "col-6">Hello</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-xl-6">50% desktop, 100% mobile</div>
+    <div class="col-sm-12 col-xl-6">50% desktop, 100% mobile</div>
+</div>
+
+ <div class="row">
+    <div class="col-lg-6 col-sm-12 col-10">Column 1</div> # .col < .col-sm
+    <div class="col-lg-3 col-sm-6 col-10">Column 2</div>
+    <div class="col-lg-3 col-sm-6 col-10">Column 3</div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-1 col-xl-3 col-lg-4 col-md-6">Column 1</div>
+    <div class="col-xxl-11 col-xl-9 col-lg-8 col-md-6">Column 2</div>
+</div>
+
+-when we use the size (sm/xl etc) we define that everything >= that defined size will have its same config.
+ e.g sm>=576px
+    nothing<=576px
+    xl>=1200px
+
+
+
+**COMPONENTS**:
+colors:Dark, Light, Info(light blue), Warning(Orange), Danger(red), Sucess(green), Secondary(grey), Primary(blue), Link(__blue).
+
+button: https://getbootstrap.com/docs/5.3/components/buttons/
+<button type="button" class="btn"></button>
+<button type="button" class="btn btn-link"></button> #with color
+<button type="button" class="btn btn-danger"></button> #with color
+
+
+
+cards: https://getbootstrap.com/docs/5.3/components/card/
+<div class="card">
+  <div class="card-body">
+    This is some text within a card body.
+  </div>
+</div>
+//just text.
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+//card with text, button with link and image.
+
+
+
+navbar/searchbar: https://getbootstrap.com/docs/5.3/components/navbar/
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <li class="nav-item dropdown">                    #dropdown
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+//searchbar
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+-SVG is an XML-based image format used for vector graphics. SVG images can be especially useful in responsive layouts because they can be resized without loss of quality.
+    used mnost for icons.
+
+
+
+**SPACING**: https://getbootstrap.com/docs/5.3/utilities/spacing/#margin-and-padding
+margin(distance betwen the top and the botton)     (m)
+padding(distance betwen the left and right margin) (p)
+
+Spacing utilities that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+
+The classes are named using the format {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl, and xxl.
+
+Where property is one of:
+
+m - for classes that set margin
+p - for classes that set padding
+Where sides is one of:
+
+t - for classes that set margin-top or padding-top
+b - for classes that set margin-bottom or padding-bottom
+s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL
+e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL
+x - for classes that set both *-left and *-right
+y - for classes that set both *-top and *-bottom
+blank - for classes that set a margin or padding on all 4 sides of the element
+Where size is one of:
+
+0 - for classes that eliminate the margin or padding by setting it to 0
+1 - (by default) for classes that set the margin or padding to $spacer * .25
+2 - (by default) for classes that set the margin or padding to $spacer * .5
+3 - (by default) for classes that set the margin or padding to $spacer
+4 - (by default) for classes that set the margin or padding to $spacer * 1.5
+5 - (by default) for classes that set the margin or padding to $spacer * 3
+auto - for classes that set the margin to auto
+
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.ms-1 {
+  margin-left: ($spacer * .25) !important;
+}
+
+.px-2 {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
+}
+
+.p-3 {
+  padding: $spacer !important;
+}
+
+
+
+**Dark Mode**: https://getbootstrap.com/docs/5.3/customize/color-modes/#dark-mode
+<html lan="en" data-bs-theme="dark">
